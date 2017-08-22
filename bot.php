@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
-			$replyToken = 'U306cd00872315c9a853169211616fd59';
+			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
@@ -24,10 +24,10 @@ if (!is_null($events['events'])) {
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
+			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
 
-				'replyToken' => $replyToken,
+				'to' => 'U306cd00872315c9a853169211616fd59',
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);
