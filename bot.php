@@ -2,19 +2,19 @@
 $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy1nRWFJVGH5xXBJyB9Rag7mfL34PsnR8Qzmrr4JVBQBRTR0Q+R3gocjfm67V7v0Am9bHoUqYRCpTIIjrO7CceKdQdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
-$content = file_get_contents('php://input');
+//$content = file_get_contents('php://input');
 // Parse JSON
-$events = json_decode($content, true);
+//$events = json_decode($content, true);
 // Validate parsed JSON data
-if (!is_null($events['events'])) {
+//if (!is_null($events['events'])) {
 	// Loop through each event
-	foreach ($events['events'] as $event) {
+	//foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		//if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			//$text = $event['message']['text'];
 			// Get replyToken
-			$replyToken = $event['replyToken'];
+			//$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}
-	}
-}
+		//}
+	//}
+//}
 echo "OK";
