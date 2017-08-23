@@ -19,7 +19,7 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			// Build message to reply back
 			$messages = [
 				'type' => 'image',
-				'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg 1x, https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_1280.jpg',
+				'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg',
     			'previewImageUrl'=> 'https://example.com/preview.jpg'
 
 			];
