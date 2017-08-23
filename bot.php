@@ -22,10 +22,10 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 				  "type"=> "imagemap",
 				  "baseUrl"=> "https://example.com/bot/images/rm001",
 				  "altText"=> "this is an imagemap",
-				  "baseSize"=> {
+				  "baseSize"=> [
 				      "height"=> 1040,
 				      "width"=> 1040
-				  }
+				  ]
 			];
 					//"type" => "location",
 				    // "title" => "my location",
