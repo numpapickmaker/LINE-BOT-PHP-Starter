@@ -19,11 +19,11 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			// Build message to reply back
 			$messages = [
 				
-				    "type": "location",
-				    "title": "my location",
-				    "address": "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-				    "latitude": 35.65910807942215,
-				    "longitude": 139.70372892916203
+				    "type" => "location",
+				    "title" => "my location",
+				    "address" => "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
+				    "latitude"=> 35.65910807942215,
+				    "longitude"=> 139.70372892916203
 
 			];
 			//  'type' => 'image',
