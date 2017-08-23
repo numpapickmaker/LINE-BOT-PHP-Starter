@@ -4,17 +4,26 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
-$events = json_decode($content);
+$events = json_decode($content, true);
 // Validate parsed JSON data
-
-
-			// Get text sent
-			$text = $events
+$debug_export = var_export($events, true);
+ob_start();
+var_dump($events);
+$debug_dump = ob_get_clean();
+// if (!is_null($events['events'])) {
+// 	// Loop through each event
+// 	foreach ($events['events'] as $event) {
+// 		// Reply only when message sent is in 'text' format
+// 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+// 			// Get text sent
+// 			$text = $event+$text;
+// 			// Get replyToken
+// 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $events
 				//'text' => $text
 			];
 					//"type" => "location",
@@ -48,5 +57,6 @@ $events = json_decode($content);
 
 			echo $result . "\r\n";
 		
-	
+// 	}
+// }
 echo "OK";
