@@ -26,7 +26,7 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 				      "height"=> 1040,
 				      "width"=> 1040
 				  },
-				  "actions": {}
+				  "actions": {
 				      {
 				          "type"=> "uri",
 				          "linkUri"=> "https://example.com/",
