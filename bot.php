@@ -23,7 +23,7 @@ $debug_dump = ob_get_clean();
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $events
+				'text' => $debug_dump
 				//'text' => $text
 			];
 					//"type" => "location",
