@@ -2,9 +2,9 @@
 $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy1nRWFJVGH5xXBJyB9Rag7mfL34PsnR8Qzmrr4JVBQBRTR0Q+R3gocjfm67V7v0Am9bHoUqYRCpTIIjrO7CceKdQdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
-//$content = file_get_contents('php://input');
+$content = file_get_contents('php://input');
 // Parse JSON
-//$events = json_decode($content, true);
+$events = json_decode($content, true);
 // Validate parsed JSON data
 //if (!is_null($events['events'])) {
 	// Loop through each event
@@ -86,7 +86,7 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			$data = [
 
 				'to' => 'U306cd00872315c9a853169211616fd59',
-				'messages' => [$messages],
+				'messages' => [$events],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
