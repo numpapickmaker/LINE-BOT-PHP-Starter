@@ -21,9 +21,9 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 				
 				    "type" => "location",
 				    "title" => "my location",
-				    "address" => "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-				    "latitude"=> 35.65910807942215,
-				    "longitude"=> 139.70372892916203
+				    "address" => "KMUTNB",
+				    "latitude"=> 13.8189664,
+				    "longitude"=> 100.5121739
 
 			];
 			//  'type' => 'image',
