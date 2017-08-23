@@ -6,70 +6,21 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-//if (!is_null($events['events'])) {
+if (!is_null($events['events'])) {
 	// Loop through each event
-	//foreach ($events['events'] as $event) {
+	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		//if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			//$text = $event['message']['text'];
+			$text = $event['message']['text'];
 			// Get replyToken
-			//$replyToken = $event['replyToken'];
+			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
-				
-				  "type"=> "template",
-				  "altText"=> "this is a carousel template",
-				  "template"=> [
-				      "type"=> "carousel",
-				      "columns"=> [
-				          [
-				            "thumbnailImageUrl"=> "https://example.com/bot/images/item1.jpg",
-				            "title"=> "this is menu",
-				            "text"=> "description",
-				            "actions"=> [
-				                [
-				                    "type"=> "postback",
-				                    "label"=> "Buy",
-				                    "data"=> "action=buy&itemid=111"
-				                ],
-				                [
-				                    "type"=> "postback",
-				                    "label"=> "Add to cart",
-				                    "data"=> "action=add&itemid=111"
-				                ],
-				                [
-				                    "type"=> "uri",
-				                    "label"=> "View detail",
-				                    "uri"=> "http://example.com/page/111"
-				                ]
-				            ]
-				          ],
-				          [
-				            "thumbnailImageUrl"=> "https://example.com/bot/images/item2.jpg",
-				            "title"=> "this is menu",
-				            "text"=> "description",
-				            "actions"=> [
-				                [
-				                    "type"=> "postback",
-				                    "label"=> "Buy",
-				                    "data"=> "action=buy&itemid=222"
-				                ],
-				                [
-				                    "type"=> "postback",
-				                    "label"=> "Add to cart",
-				                    "data"=> "action=add&itemid=222"
-				                ],
-				                [
-				                    "type"=> "uri",
-				                    "label"=> "View detail",
-				                    "uri"=> "http://example.com/page/222"
-				                ]
-				            ]
-				          ]
-				      ]
-				  ]
+				'type' => 'text',
+				'text' => $text
+				//'text' => $text
 			];
 					//"type" => "location",
 				    // "title" => "my location",
@@ -86,7 +37,7 @@ $events = json_decode($content, true);
 			$data = [
 
 				'to' => 'U306cd00872315c9a853169211616fd59',
-				'messages' => [$events],
+				'messages' => [$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -101,7 +52,7 @@ $events = json_decode($content, true);
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		//}
-	//}
-//}
+		}
+	}
+}
 echo "OK";
