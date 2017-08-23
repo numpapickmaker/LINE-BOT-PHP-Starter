@@ -20,8 +20,7 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			$messages = [
 				'type' => 'image',
 				'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg',
-    			'previewImageUrl'=> 'http://imgur.com/a/Cc5gL'
-
+    			'previewImageUrl'=> 'http://i.imgur.com/2WCYC2V.jpg?1'
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
