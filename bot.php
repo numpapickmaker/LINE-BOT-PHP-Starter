@@ -18,9 +18,37 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'image',
-				'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg',
-    			'previewImageUrl'=> 'https://i.imgur.com/2WCYC2V.jpg?1'
+				{
+				  "type": "imagemap",
+				  "baseUrl": "https://example.com/bot/images/rm001",
+				  "altText": "this is an imagemap",
+				  "baseSize": {
+				      "height": 1040,
+				      "width": 1040
+				  },
+				  "actions": [
+				      {
+				          "type": "uri",
+				          "linkUri": "https://example.com/",
+				          "area": {
+				              "x": 0,
+				              "y": 0,
+				              "width": 520,
+				              "height": 1040
+				          }
+				      },
+				      {
+				          "type": "message",
+				          "text": "hello",
+				          "area": {
+				              "x": 520,
+				              "y": 0,
+				              "width": 520,
+				              "height": 1040
+				          }
+				      }
+				  ]
+				}
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
