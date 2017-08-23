@@ -19,32 +19,54 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			// Build message to reply back
 			$messages = [
 				
-				  "type"=> "imagemap",
-				  "baseUrl"=> "https://example.com/bot/images/rm001",
-				  "altText"=> "this is an imagemap",
-				  "baseSize"=> [
-				      "height"=> 1040,
-				      "width"=> 1040
-				  ],
-				  "actions"=> [
-				      [
-				          "type"=> "uri",
-				          "linkUri"=> "https://example.com/",
-				          "area"=> [
-				              "x"=> 0,
-				              "y"=> 0,
-				              "width"=> 520,
-				              "height"=> 1040
-				          ]
-				      ],
-				      [
-				          "type"=> "message",
-				          "text"=> "hello",
-				          "area"=> [
-				              "x"=> 520,
-				              "y"=> 0,
-				              "width"=> 520,
-				              "height"=> 1040
+				  "type"=> "template",
+				  "altText"=> "this is a carousel template",
+				  "template"=> [
+				      "type"=> "carousel",
+				      "columns"=> [
+				          [
+				            "thumbnailImageUrl"=> "https://example.com/bot/images/item1.jpg",
+				            "title"=> "this is menu",
+				            "text"=> "description",
+				            "actions"=> [
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Buy",
+				                    "data"=> "action=buy&itemid=111"
+				                ],
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Add to cart",
+				                    "data"=> "action=add&itemid=111"
+				                ],
+				                [
+				                    "type"=> "uri",
+				                    "label"=> "View detail",
+				                    "uri"=> "http://example.com/page/111"
+				                ]
+				            ]
+				          ],
+				          [
+				            "thumbnailImageUrl"=> "https://example.com/bot/images/item2.jpg",
+				            "title"=> "this is menu",
+				            "text"=> "description",
+				            "actions"=> [
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Buy",
+				                    "data"=> "action=buy&itemid=222"
+				                ],
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Add to cart",
+				                    "data"=> "action=add&itemid=222"
+				                ],
+				                [
+				                    "type"=> "uri",
+				                    "label"=> "View detail",
+				                    "uri"=> "http://example.com/page/222"
+				                ]
+				            ]
 				          ]
 				      ]
 				  ]
