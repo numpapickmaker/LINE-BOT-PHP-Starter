@@ -20,7 +20,7 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			$messages = [
 				'type' => 'image',
 				'originalContentUrl'=> 'https://goo.gl/images/72DX1t',
-    			'previewImageUrl'=> 'https://example.com/preview.jpg'
+    			'previewImageUrl'=> 'https://goo.gl/images/qCB3bt'
 
 			];
     
