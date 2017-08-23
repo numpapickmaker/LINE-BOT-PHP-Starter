@@ -19,11 +19,10 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 			// Build message to reply back
 			$messages = [
 				'type' => 'image',
-				'originalContentUrl'=> 'https://goo.gl/images/72DX1t',
-    			'previewImageUrl'=> 'https://goo.gl/images/qCB3bt'
+				'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg 1x, https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_1280.jpg 2x',
+    			'previewImageUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg'
 
 			];
-    
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
