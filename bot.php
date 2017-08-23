@@ -18,7 +18,7 @@ $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
+				'type' => 'image',
 				'originalContentUrl' => 'http://numpapickyoungmaker.blogspot.com',
 				'previewImageUrl' =>  'https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwiWs5Wxl-3VAhXHLo8KHVGsDVsQjRwIBw&url=https%3A%2F%2Fpixabay.com%2Fen%2Fphotos%2Fsnow%2F&psig=AFQjCNG0n2TXH_08ANuPQSBz164LCfRNnw&ust=1503571748509241'
 				
