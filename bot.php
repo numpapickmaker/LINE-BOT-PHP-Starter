@@ -22,8 +22,11 @@ $debug_dump = ob_get_clean();
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
-				'text' => $debug_dump
+				'type' => 'image',
+			 	'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg',
+			 	'previewImageUrl'=> 'https://i.imgur.com/2WCYC2V.jpg?1'
+				// 'type' => 'text',
+				// 'text' => $debug_dump
 				//'text' => $text
 			];
 					//"type" => "location",
