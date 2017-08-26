@@ -38,7 +38,7 @@ $debug_dump = ob_get_clean();
 				          [
 				            "type"=> "uri",
 				            "label"=> "View detail",
-				            "uri"=> "app.midatdb.com/PFrCbTJd2J"
+				            "uri"=> "http://app.midatdb.com/PFrCbTJd2J"
 				          ]
 				      ]
 				  ]
