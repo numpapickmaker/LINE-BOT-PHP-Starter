@@ -32,13 +32,13 @@ $debug_dump = ob_get_clean();
 				      "actions"=> [
 				          [
 				            "type"=> "message",
-		 		            "label"=> "Yes",
-		 		            "text"=> "yes"
+		 		            "label"=> "Acknowledge",
+		 		            "text"=> "Acknowledge"
 				          ],
 				          [
 				            "type"=> "uri",
 				            "label"=> "View detail",
-				            "uri"=> "http://example.com/page/123"
+				            "uri"=> "app.midatdb.com/PFrCbTJd2J"
 				          ]
 				      ]
 				  ]
