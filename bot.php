@@ -1,15 +1,15 @@
 <?php
 $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy1nRWFJVGH5xXBJyB9Rag7mfL34PsnR8Qzmrr4JVBQBRTR0Q+R3gocjfm67V7v0Am9bHoUqYRCpTIIjrO7CceKdQdB04t89/1O/w1cDnyilFU=';
 
-// Get POST body content
-$content = file_get_contents('php://input');
-// Parse JSON
-$events = json_decode($content, true);
-// Validate parsed JSON data
-$debug_export = var_export($events, true);
-ob_start();
-var_dump($events);
-$debug_dump = ob_get_clean();
+// // Get POST body content
+// $content = file_get_contents('php://input');
+// // Parse JSON
+// $events = json_decode($content, true);
+// // Validate parsed JSON data
+// $debug_export = var_export($events, true);
+// ob_start();
+// var_dump($events);
+// $debug_dump = ob_get_clean();
 // if (!is_null($events['events'])) {
 // 	// Loop through each event
 // 	foreach ($events['events'] as $event) {
@@ -22,7 +22,7 @@ $debug_dump = ob_get_clean();
 
 			// Build message to reply back
 			$messages = [
-					[
+					
 				  "type"=> "template",
 				  "altText"=> "this is a carousel template",
 				  "template"=> [
@@ -74,7 +74,7 @@ $debug_dump = ob_get_clean();
 				          ]
 				      ]
 				  ]
-				]
+				
   
 			  
 
