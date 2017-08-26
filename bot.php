@@ -23,31 +23,51 @@ $debug_dump = ob_get_clean();
 			// Build message to reply back
 			$messages = [
 				  "type"=> "template",
-				  "altText"=> "this is a buttons template",
+				  "altText"=> "this is a confirm template",
 				  "template"=> [
-				      "type"=> "buttons",
-				      "thumbnailImageUrl"=> "https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg",
-				      "title"=> "Menu",
-				      "text"=> "Please select",
+				      "type"=> "confirm",
+				      "text"=> "Are you sure?",
 				      "actions"=> [
 				          [
-				            "type"=> "postback",
-				            "label"=> "Buy",
-				            "data"=> "action=buy&itemid=123"
+				            "type"=> "message",
+				            "label"=> "Yes",
+				            "text"=> "yes"
 				          ],
 				          [
-				            "type"=> "postback",
-				            "label"=> "Add to cart",
-				            "data"=> "action=add&itemid=123"
-				          ],
-				          [
-				            "type"=> "uri",
-				            "label"=> "View detail",
-				            "uri"=> "http://example.com/page/123"
+				            "type"=> "message",
+				            "label"=> "No",
+				            "text"=> "no"
 				          ]
 				      ]
 				  ]
 			];
+			// $messages = [
+			// 	  "type"=> "template",
+			// 	  "altText"=> "this is a buttons template",
+			// 	  "template"=> [
+			// 	      "type"=> "buttons",
+			// 	      "thumbnailImageUrl"=> "https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg",
+			// 	      "title"=> "Menu",
+			// 	      "text"=> "Please select",
+			// 	      "actions"=> [
+			// 	          [
+			// 	            "type"=> "postback",
+			// 	            "label"=> "Buy",
+			// 	            "data"=> "action=buy&itemid=123"
+			// 	          ],
+			// 	          [
+			// 	            "type"=> "postback",
+			// 	            "label"=> "Add to cart",
+			// 	            "data"=> "action=add&itemid=123"
+			// 	          ],
+			// 	          [
+			// 	            "type"=> "uri",
+			// 	            "label"=> "View detail",
+			// 	            "uri"=> "http://example.com/page/123"
+			// 	          ]
+			// 	      ]
+			// 	  ]
+			// ];
 				// 'type' => 'text',
 				// 'text' => $debug_dump
 				//'text' => $text
