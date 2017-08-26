@@ -22,27 +22,45 @@ $debug_dump = ob_get_clean();
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
-				'text' => $debug_dump
-				  // "type"=> "template",
-				  // "altText"=> "this is a confirm template",
-				  // "template"=> [
-				  //     "type"=> "confirm",
-				  //     "text"=> "Are you sure?",
-				  //     "actions"=> [
-				  //         [
-				  //           "type"=> "message",
-				  //           "label"=> "Yes",
-				  //           "text"=> "yes"
-				  //         ],
-				  //         [
-				  //           "type"=> "message",
-				  //           "label"=> "No",
-				  //           "text"=> "no"
-				  //         ]
-				  //     ]
-				  // ]
+				  "type"=> "template",
+				  "altText"=> "this is a buttons template",
+				  "template"=> [
+				      "type"=> "buttons",
+				      "thumbnailImageUrl"=> "https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg",
+				      "title"=> "Menu",
+				      "text"=> "Please select",
+				      "actions"=> [
+				          [
+				            "type"=> "message",
+		 		            "label"=> "Yes",
+		 		            "text"=> "yes"
+				          ],
+				          [
+				            "type"=> "uri",
+				            "label"=> "View detail",
+				            "uri"=> "http://example.com/page/123"
+				          ]
+				      ]
+				  ]
 			];
+
+		// "type"=> "template",
+		// 		  "altText"=> "this is a confirm template",
+		// 		  "template"=> [
+		// 		      "type"=> "confirm",
+		// 		      "text"=> "Are you sure?",
+		// 		      "actions"=> [
+		// 		          [
+		// 		            "type"=> "message",
+		// 		            "label"=> "Yes",
+		// 		            "text"=> "yes"
+		// 		          ],
+		// 		          [
+		// 		            "type"=> "message",
+		// 		            "label"=> "No",
+		// 		            "text"=> "no"
+		// 		          ]
+		// 		      ]
 			// $messages = [
 			// 	  "type"=> "template",
 			// 	  "altText"=> "this is a buttons template",
