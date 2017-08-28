@@ -27,7 +27,7 @@ $debug_dump = ob_get_clean();
 				      "type"=> "carousel",
 				      "columns"=> [
 				          [
-				            "thumbnailImageUrl"=> "https://i.imgur.com/BhEZCG6.png ",
+				            "thumbnailImageUrl"=> "https://i.imgur.com/BhEZCG6.png",
 				            "title"=> "this is menu",
 				            "text"=> "description",
 				            "actions"=> [
