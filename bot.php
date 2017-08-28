@@ -1,6 +1,5 @@
 <?php
 $access_token = '2uqo5ucAcfrmOpw/3eaZFd6acQsNKYS1eqq7AK/aq6+tG9qGgetZbduYbg7pydy1nRWFJVGH5xXBJyB9Rag7mfL34PsnR8Qzmrr4JVBQBRTR0Q+R3gocjfm67V7v0Am9bHoUqYRCpTIIjrO7CceKdQdB04t89/1O/w1cDnyilFU=';
-
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -19,75 +18,61 @@ $debug_dump = ob_get_clean();
 // 			$text = $event+$text;
 // 			// Get replyToken
 // 			$replyToken = $event['replyToken'];
-
 			// Build message to reply back
 			$messages = [
+				
 				  "type"=> "template",
-				  "altText"=> "this is a buttons template",
+				  "altText"=> "this is a carousel template",
 				  "template"=> [
-				      "type"=> "buttons",
-				      "thumbnailImageUrl"=> "https://i.imgur.com/t3aVgCp.jpg",
-				      "title"=> "Menu",
-				      "text"=> "Please select",
-				      "actions"=> [
+				      "type"=> "carousel",
+				      "columns"=> [
 				          [
-				            "type"=> "message",
-		 		            "label"=> "Acknowledge",
-		 		            "text"=> "Acknowledge"
+				            "thumbnailImageUrl"=> "https://example.com/bot/images/item1.jpg",
+				            "title"=> "this is menu",
+				            "text"=> "description",
+				            "actions"=> [
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Buy",
+				                    "data"=> "action=buy&itemid=111"
+				                ],
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Add to cart",
+				                    "data"=> "action=add&itemid=111"
+				                ],
+				                [
+				                    "type"=> "uri",
+				                    "label"=> "View detail",
+				                    "uri"=> "http://example.com/page/111"
+				                ]
+				            ]
 				          ],
 				          [
-				            "type"=> "uri",
-				            "label"=> "View detail",
-				            "uri"=> "http://app.midatdb.com/PFrCbTJd2J"
+				            "thumbnailImageUrl"=> "https://example.com/bot/images/item2.jpg",
+				            "title"=> "this is menu",
+				            "text"=> "description",
+				            "actions"=> [
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Buy",
+				                    "data"=> "action=buy&itemid=222"
+				                ],
+				                [
+				                    "type"=> "postback",
+				                    "label"=> "Add to cart",
+				                    "data"=> "action=add&itemid=222"
+				                ],
+				                [
+				                    "type"=> "uri",
+				                    "label"=> "View detail",
+				                    "uri"=> "http://example.com/page/222"
+				                ]
+				            ]
 				          ]
 				      ]
 				  ]
 			];
-
-		// "type"=> "template",
-		// 		  "altText"=> "this is a confirm template",
-		// 		  "template"=> [
-		// 		      "type"=> "confirm",
-		// 		      "text"=> "Are you sure?",
-		// 		      "actions"=> [
-		// 		          [
-		// 		            "type"=> "message",
-		// 		            "label"=> "Yes",
-		// 		            "text"=> "yes"
-		// 		          ],
-		// 		          [
-		// 		            "type"=> "message",
-		// 		            "label"=> "No",
-		// 		            "text"=> "no"
-		// 		          ]
-		// 		      ]
-			// $messages = [
-			// 	  "type"=> "template",
-			// 	  "altText"=> "this is a buttons template",
-			// 	  "template"=> [
-			// 	      "type"=> "buttons",
-			// 	      "thumbnailImageUrl"=> "https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg",
-			// 	      "title"=> "Menu",
-			// 	      "text"=> "Please select",
-			// 	      "actions"=> [
-			// 	          [
-			// 	            "type"=> "postback",
-			// 	            "label"=> "Buy",
-			// 	            "data"=> "action=buy&itemid=123"
-			// 	          ],
-			// 	          [
-			// 	            "type"=> "postback",
-			// 	            "label"=> "Add to cart",
-			// 	            "data"=> "action=add&itemid=123"
-			// 	          ],
-			// 	          [
-			// 	            "type"=> "uri",
-			// 	            "label"=> "View detail",
-			// 	            "uri"=> "http://example.com/page/123"
-			// 	          ]
-			// 	      ]
-			// 	  ]
-			// ];
 				// 'type' => 'text',
 				// 'text' => $debug_dump
 				//'text' => $text
@@ -100,17 +85,14 @@ $debug_dump = ob_get_clean();
 			//  'type' => 'image',
 			// 	'originalContentUrl'=> 'https://cdn.pixabay.com/photo/2014/11/28/22/23/alm-549333_960_720.jpg',
    			//  'previewImageUrl'=> 'https://i.imgur.com/2WCYC2V.jpg?1'
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-
 				'to' => 'U306cd00872315c9a853169211616fd59',
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -119,7 +101,6 @@ $debug_dump = ob_get_clean();
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
 			echo $result . "\r\n";
 		
 // 	}
