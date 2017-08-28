@@ -49,7 +49,7 @@ $debug_dump = ob_get_clean();
 				            ]
 				          ],
 				          [
-				            "thumbnailImageUrl"=> "http://i.imgur.com/c65ILrh.jpg",
+				            "thumbnailImageUrl"=> "https://i.imgur.com/c65ILrh.jpg",
 				            "title"=> "this is menu",
 				            "text"=> "description",
 				            "actions"=> [
